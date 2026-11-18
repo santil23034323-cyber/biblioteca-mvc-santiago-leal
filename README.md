@@ -30,29 +30,117 @@ In addition, [Laracasts](https://laracasts.com) contains thousands of video tuto
 You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
 
 ## Agentic Development
+# Biblioteca de Santiago
 
-Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
+Sistema web desarrollado con Laravel para administrar una biblioteca especializada en libros de terror, misterio y suspenso.
 
-```bash
-composer require laravel/boost --dev
+## Características
 
-php artisan boost:install
-```
+- Registrar, consultar, editar y eliminar libros.
+- Crear y consultar categorías.
+- Eliminar categorías únicamente cuando no tengan libros asociados.
+- Buscar libros por título.
+- Filtrar libros por categoría.
+- Consultar la disponibilidad de cada libro.
+- Validar los datos de los formularios.
+- Mostrar mensajes de confirmación y error.
+- Relacionar libros y categorías mediante una relación uno a muchos.
 
-Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
+## Tecnologías utilizadas
 
-## Contributing
+- PHP 8.5
+- Laravel 13
+- MySQL
+- Blade
+- HTML y CSS
+- Git y GitHub
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## Requisitos previos
 
-## Code of Conduct
+Para ejecutar este proyecto necesitas:
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+- PHP 8.5 o compatible.
+- Composer.
+- MySQL.
+- Git.
 
-## Security Vulnerabilities
+## Instalación
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+1. Clonar el repositorio:
 
-## License
+   ```bash
+   git clone https://github.com/santil23034323-cyber/biblioteca-mvc-santiago-leal.git
+   ```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+2. Entrar a la carpeta:
+
+   ```bash
+   cd biblioteca-mvc-santiago-leal
+   ```
+
+3. Instalar las dependencias:
+
+   ```bash
+   composer install
+   ```
+
+4. Crear el archivo de configuración:
+
+   En Windows PowerShell:
+
+   ```powershell
+   Copy-Item .env.example .env
+   ```
+
+5. Crear una base de datos MySQL llamada:
+
+   `biblioteca_santiago_leal`
+
+6. Configurar las credenciales de conexión en el archivo `.env`:
+
+   ```env
+   DB_CONNECTION=mysql
+   DB_HOST=127.0.0.1
+   DB_PORT=3306
+   DB_DATABASE=biblioteca_santiago_leal
+   DB_USERNAME=root
+   DB_PASSWORD=
+   ```
+
+7. Generar la clave de la aplicación:
+
+   ```bash
+   php artisan key:generate
+   ```
+
+8. Ejecutar las migraciones y cargar los datos de prueba:
+
+   ```bash
+   php artisan migrate --seed
+   ```
+
+9. Iniciar el servidor:
+
+   ```bash
+   php artisan serve
+   ```
+
+10. Abrir en el navegador:
+
+   http://127.0.0.1:8000
+
+## Estructura del proyecto
+
+El proyecto utiliza el patrón Modelo-Vista-Controlador (MVC):
+
+- **Modelos:** representan los libros y las categorías y sus relaciones.
+- **Vistas:** muestran la información mediante Blade.
+- **Controladores:** gestionan las solicitudes, validaciones y operaciones de la aplicación.
+- **Migraciones:** definen la estructura de la base de datos.
+- **Seeders:** permiten cargar datos iniciales de prueba.
+
+## Autor
+
+**Santiago Leal**  
+Ficha: 3478025  
+Año: 2026
